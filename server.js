@@ -3,7 +3,7 @@ var app = express();
 var Mongoose = require('mongoose');
 var db = Mongoose.createConnection('localhost', 'fastforward');
 
-app.use('/assets', express.static(__dirname + '/public'));
+app.use('/assets', express.static(__dirname + '/public/assets'));
 app.get('/',function(req,res){
   res.send("FASTforward>>");
 });
