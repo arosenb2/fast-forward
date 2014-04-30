@@ -12,7 +12,7 @@ Guide for avoiding mature and adult content in television and movies.
 - To open MongoDB shell:
   - $ mongo
 
-#### Redis
+#### [Redis](http://redis.io)
 - => redis 2.6.16
 - To start the server:
   - $ parts start redis
@@ -59,7 +59,7 @@ Guide for avoiding mature and adult content in television and movies.
 
 ### Episodes
 - **ID**
-- *Show ID*
+- ***Show ID***
 - Season Number
 - Episode Number
 - Episode Title
@@ -68,8 +68,8 @@ Guide for avoiding mature and adult content in television and movies.
 
 ### Incidents
 - **ID**
-- *Episode ID*
-- *Movie ID*
+- ***Episode ID***
+- ***Movie ID***
 - Incident Category
   - Enum: *Alcohol, Drugs, Nudity, Sexual Content, Violence*
 - Start Time
