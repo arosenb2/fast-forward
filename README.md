@@ -119,12 +119,16 @@ To connect to the server:
 ## Architecture
 ### Front End
 - Angular.js
+
 ### Back End
 - Express.js (API)
+
 #### Authentication
 - Passport.js
+
 #### ORM
 - Mongoose.js
+
 ### Database
 - MongoDB
 - Redis (tracking users)
@@ -132,36 +136,36 @@ To connect to the server:
 ## DB Schema
 *All meta data will be gathered through scraping entries from Wikipedia*
 ### Movies
-ID
-Title
-Image URL
-Release Year
-Length
+- ID
+- Title
+- Image URL
+- Release Year
+- Length
 
 ### Shows
-ID
-Title
-Image URL
-Release Year
-Season Count
-Episode Count
+- ID
+- Title
+- Image URL
+- Release Year
+- Season Count
+- Episode Count
 
 ### Episodes
-ID
-Show ID
-Season Number
-Episode Number
-Episode Title
-Episode Length
-Episode Description
+- ID
+- Show ID
+- Season Number
+- Episode Number
+- Episode Title
+- Episode Length
+- Episode Description
 
 ### Incidents
-ID
-Episode ID
-Movie ID
-Incident Category (enum: Alcohol, Drugs, Nudity, Sexual Content, Violence)
-Start Time
-End Time
-Length
-Description
-Spoiler
+- ID
+- Episode ID
+- Movie ID
+- Incident Category (enum: Alcohol, Drugs, Nudity, Sexual Content, Violence)
+- Start Time
+- End Time
+- Length
+- Description
+- Spoiler
