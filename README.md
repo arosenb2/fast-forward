@@ -1,28 +1,26 @@
 # FASTforward
 
-## MongoDB
+Guide for avoiding mature and adult content in television and movies.
 
-=> mongodb 2.4.9
-To start the server:
-  $ parts start mongodb
+## Getting Started
+### Nitrous.io
+#### MongoDB
+- => mongodb 2.4.9
+- To start the server:
+  - $ parts start mongodb
+- To stop the server:
+    $ parts stop mongodb
+- To open MongoDB shell:
+  - $ mongo
 
-To stop the server:
-  $ parts stop mongodb
-
-To open MongoDB shell:
-  $ mongo
-
-## Redis
-
-=> redis 2.6.16
-To start the server:
-  $ parts start redis
-
-To stop the server:
-  $ parts stop redis
-
-To connect to the server:
-  $ redis-cli
+#### Redis
+- => redis 2.6.16
+- To start the server:
+  - $ parts start redis
+- To stop the server:
+  - $ parts stop redis
+- To connect to the server:
+  - $ redis-cli
 
 
 ## Architecture
@@ -40,7 +38,7 @@ To connect to the server:
 
 ### Database
 - MongoDB
-- Redis (tracking users)
+- Redis (tracking active users)
 
 ## DB Schema
 *All meta data will be gathered through scraping entries from Wikipedia*
