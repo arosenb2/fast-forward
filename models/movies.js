@@ -12,7 +12,7 @@ var Movie = new Mongoose.Schema({
   imageURL:{
     type: String,
     validate: [
-      function(v){ return /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/i.test(v) },
+      function(v){ return /^(((http(s?))\:)?\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/i.test(v) },
       "The URL is invalid."
     ]
   },

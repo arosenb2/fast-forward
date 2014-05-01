@@ -13,13 +13,13 @@ app.get('/',function(req,res){
 app.get('/movies',function(req,res){
   // http://node-fast-forward-107599.use1-2.nitrousbox.com/movies
   Movie.find({},function(err,obj){
-      res.send(obj);
+      res.send(200,obj);
   });
 });
 app.get('/movies/:id',function(req,res){
   // http://node-fast-forward-107599.use1-2.nitrousbox.com/movies/5361c5d8a04b7f5c062c07c2
   Movie.findOne({id:req.id},function(err,obj){
-      res.send(obj);
+      res.send(200,obj);
   });
 });
 
