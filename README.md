@@ -86,4 +86,4 @@ Guide for avoiding mature and adult content in television and movies.
 ### Test Data
 - {"title":"Back to the Future","imageURL":"//upload.wikimedia.org/wikipedia/en/d/d2/Back_to_the_Future.jpg","year":1985,"length":116}
 - {"title":"Back to the Future Part II","imageURL":"//upload.wikimedia.org/wikipedia/en/c/c2/Back_to_the_Future_Part_II.jpg","year":1989,"length":108}
-- {"title":"Back to the Future Part III","imageURL":"http://upload.wikimedia.org/wikipedia/en/4/4e/Back_to_the_Future_Part_III.jpg","year":1990,"length":118}
+- {"title":"Back to the Future Part III","imageURL":"//upload.wikimedia.org/wikipedia/en/4/4e/Back_to_the_Future_Part_III.jpg","year":1990,"length":118}
