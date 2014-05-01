@@ -15,7 +15,7 @@ app.get('/movies',function(req,res){
   });
 });
 app.get('/movies/:id',function(req,res){
-  // http://node-fast-forward-107599.use1-2.nitrousbox.com/movie/5361c5d8a04b7f5c062c07c2
+  // http://node-fast-forward-107599.use1-2.nitrousbox.com/movies/5361c5d8a04b7f5c062c07c2
   Movie.findOne({id:req.id},function(err,obj){
       res.send(obj);
   });
