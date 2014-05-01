@@ -1,19 +1,18 @@
 # FASTforward
-
 Guide for avoiding mature and adult content in television and movies.
 
 ## Getting Started
-### Nitrous.io
-#### MongoDB
+### [Nitrous.io](http://nitrous.io)
+#### [MongoDB](http://mongodb.org)
 - => mongodb 2.4.9
 - To start the server:
   - $ parts start mongodb
 - To stop the server:
-    $ parts stop mongodb
+  - $ parts stop mongodb
 - To open MongoDB shell:
   - $ mongo
 
-#### Redis
+#### [Redis](http://redis.io)
 - => redis 2.6.16
 - To start the server:
   - $ parts start redis
@@ -22,35 +21,36 @@ Guide for avoiding mature and adult content in television and movies.
 - To connect to the server:
   - $ redis-cli
 
-
 ## Architecture
 ### Front End
-- Angular.js
+- [Angular.js](http://angularjs.org/)
 
 ### Back End
-- Express.js (API)
+- [Express.js](http://expressjs.com/)
+  - API
 
 #### Authentication
-- Passport.js
+- [Passport.js](http://passportjs.org/)
 
 #### ORM
-- Mongoose.js
+- [Mongoose.js](http://mongoosejs.com)
 
 ### Database
-- MongoDB
-- Redis (tracking active users)
+- [MongoDB](http://mongodb.org)
+- [Redis](http://redis.io)
+  - Tracking Active Users
 
 ## DB Schema
 *All meta data will be gathered through scraping entries from Wikipedia*
 ### Movies
-- ID
+- **ID**
 - Title
 - Image URL
 - Release Year
 - Length
 
 ### Shows
-- ID
+- **ID**
 - Title
 - Image URL
 - Release Year
@@ -58,8 +58,8 @@ Guide for avoiding mature and adult content in television and movies.
 - Episode Count
 
 ### Episodes
-- ID
-- Show ID
+- **ID**
+- ***Show ID***
 - Season Number
 - Episode Number
 - Episode Title
@@ -67,10 +67,11 @@ Guide for avoiding mature and adult content in television and movies.
 - Episode Description
 
 ### Incidents
-- ID
-- Episode ID
-- Movie ID
-- Incident Category (enum: Alcohol, Drugs, Nudity, Sexual Content, Violence)
+- **ID**
+- ***Episode ID***
+- ***Movie ID***
+- Incident Category
+  - Enum: *Alcohol, Drugs, Nudity, Sexual Content, Violence*
 - Start Time
 - End Time
 - Length

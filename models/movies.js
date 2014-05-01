@@ -1,3 +1,5 @@
+var Mongoose = require("mongoose");
+
 var Movie = new Mongoose.Schema({
   title:{
     type: String,
@@ -32,3 +34,8 @@ var Movie = new Mongoose.Schema({
 var Movies = new Mongoose.Schema({
   movies: [Movie]
 });
+
+module.exports = {
+  Movie : Movie,
+  Movies : Movies
+};
