@@ -1,12 +1,15 @@
 var express = require('express'),
     app = express(),
-    bodyParser = require('body-parser'),  
+    bodyParser = require('body-parser'),
+    methodOverride = require('method-override'),
     Mongoose = require('mongoose'),
     db = Mongoose.connect('mongodb://localhost/fastforward'),
     Movie = Mongoose.model("Movie",require('./models/movies').Movie);
 
 app.use('/assets', express.static(__dirname + '/public/assets'));
 app.use(bodyParser());
+app.use(methodOverride());
+
 app.get('/',function(req,res){
   res.send("FASTforward>>");
 });
@@ -29,10 +32,19 @@ app.post('/movies',function(req,res){
       req.body.status = "Pending"; 
       new Movie(req.body).save(function(err){
         if(err) res.send(400,err);
-        else res.send(200);
+        else res.send(200,obj);
       });
     }
     else res.send(400,req.body.title+" already exists. Use PUT to update.");
+  });
+});
+
+app.put('/movies/:id',function(req,res){
+  Movie.findByIdAndUpdate(req.params.id,req.body,function(err,obj){
+    if(!err){
+      res.send(200,obj);
+    }
+    else res.send(400,err);
   });
 });
 
