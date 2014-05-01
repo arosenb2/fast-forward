@@ -14,14 +14,14 @@ app.get('/movies',function(req,res){
       res.send(obj);
   });
 });
-app.get('/movie/:id',function(req,res){
+app.get('/movies/:id',function(req,res){
   // http://node-fast-forward-107599.use1-2.nitrousbox.com/movie/5361c5d8a04b7f5c062c07c2
   Movie.findOne({id:req.id},function(err,obj){
       res.send(obj);
   });
 });
 
-app.post('/movie',function(req,res){
+app.post('/movies',function(req,res){
   /*
   How to add Back to the Future
   =============================
