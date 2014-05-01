@@ -29,6 +29,14 @@ var Movie = new Mongoose.Schema({
       function(v){ return v > 0 },
       "The length can't be negative."
     ]
+  },
+  status:{
+    type: String,
+    required: true,
+    enum: {
+      values: ["Rejected","Approved","Pending"],
+      message: "'`{VALUE}`' is not a valid status."
+    }
   }
 });
 var Movies = new Mongoose.Schema({

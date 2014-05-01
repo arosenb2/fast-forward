@@ -54,6 +54,14 @@ var Incident = new Mongoose.Schema({
   spoiler:{
     type: Boolean,
     default: false
+  },
+  status:{
+    type: String,
+    required: true,
+    enum: {
+      values: ["Rejected","Approved","Pending"],
+      message: "'`{VALUE}`' is not a valid status."
+    }
   }
 });
 var Incidents = new Mongoose.Schema({

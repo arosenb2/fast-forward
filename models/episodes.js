@@ -37,6 +37,14 @@ var Show = new Mongoose.Schema({
       function(v){ return v > 0 },
       "The number of episodes can't be negative."
     ]
+  },
+  status:{
+    type: String,
+    required: true,
+    enum: {
+      values: ["Rejected","Approved","Pending"],
+      message: "'`{VALUE}`' is not a valid status."
+    }
   }
 });
   
@@ -80,6 +88,14 @@ var Episode = new Mongoose.Schema({
       function(v){ return v.length > 0 },
       "The episode description has to be at least 1 letter or number long."
     ]
+  },
+  status:{
+    type: String,
+    required: true,
+    enum: {
+      values: ["Rejected","Approved","Pending"],
+      message: "'`{VALUE}`' is not a valid status."
+    }
   }
 });
 var Episodes = new Mongoose.Schema({
