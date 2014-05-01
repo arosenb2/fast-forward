@@ -82,7 +82,7 @@ Guide for avoiding mature and adult content in television and movies.
   
 ## General Notes
 ### Wikipedia
-- For Wikipedia preview image detection, the thumbnail ( $("td a.image img").attr("src") ) will need to be changed from *//upload.wikimedia.org/wikipedia/en/thumb/4/4e/Back_to_the_Future_Part_III.jpg/220px-Back_to_the_Future_Part_III.jpg* to *//upload.wikimedia.org/wikipedia/en/4/4e/Back_to_the_Future_Part_III.jpg*
+- For Wikipedia preview image detection, the thumbnail *$("td a.image img").attr("src")* will need to be changed from *//upload.wikimedia.org/wikipedia/en/thumb/4/4e/Back_to_the_Future_Part_III.jpg/220px-Back_to_the_Future_Part_III.jpg* to *//upload.wikimedia.org/wikipedia/en/4/4e/Back_to_the_Future_Part_III.jpg*
 
 ### Test Data
 - {"title":"Back to the Future","imageURL":"//upload.wikimedia.org/wikipedia/en/d/d2/Back_to_the_Future.jpg","year":1985,"length":116}
