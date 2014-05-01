@@ -77,3 +77,8 @@ Guide for avoiding mature and adult content in television and movies.
 - Length
 - Description
 - Spoiler
+- Status
+  - Enum: *Pending, Rejected, Approved*
+  
+## General Notes
+For Wikipedia preview image detection, the thumbnail ( $("td a.image img").attr("src") ) will need to be changed from *//upload.wikimedia.org/wikipedia/en/thumb/4/4e/Back_to_the_Future_Part_III.jpg/220px-Back_to_the_Future_Part_III.jpg* to *//upload.wikimedia.org/wikipedia/en/4/4e/Back_to_the_Future_Part_III.jpg*

@@ -1,10 +1,12 @@
 var express = require('express'),
-  app = express(),
-  Mongoose = require('mongoose'),
-  db = Mongoose.connect('mongodb://localhost/fastforward'),
-  Movie = Mongoose.model("Movie",require('./models/movies').Movie);
+    app = express(),
+    bodyParser = require('body-parser'),  
+    Mongoose = require('mongoose'),
+    db = Mongoose.connect('mongodb://localhost/fastforward'),
+    Movie = Mongoose.model("Movie",require('./models/movies').Movie);
 
 app.use('/assets', express.static(__dirname + '/public/assets'));
+app.use(bodyParser());
 app.get('/',function(req,res){
   res.send("FASTforward>>");
 });
@@ -22,21 +24,16 @@ app.get('/movies/:id',function(req,res){
 });
 
 app.post('/movies',function(req,res){
-  /*
-  How to add Back to the Future
-  =============================
-  var bttf = new Movie();
-  bttf.title = "Back to the Future";
-  bttf.year = 1985;
-  bttf.imageURL = "http://upload.wikimedia.org/wikipedia/en/thumb/d/d2/Back_to_the_Future.jpg/220px-Back_to_the_Future.jpg";
-  bttf.length = 116;
-  bttf.save(function(err){
-    console.log(err);
+  Movie.findOne({title:req.body.title},function(err,obj){
+    if(obj === null){
+      req.body.status = "Pending"; 
+      new Movie(req.body).save(function(err){
+        if(err) res.send(400,err);
+        else res.send(200);
+      });
+    }
+    else res.send(400,req.body.title+" already exists. Use PUT to update.");
   });
-  */
-  
-  /* Logging the request for initial debugging */
-  console.log(req);
 });
 
 app.listen(3000,'0.0.0.0',function(){
