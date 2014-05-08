@@ -1,12 +1,15 @@
 var express = require('express'),
     app = express(),
     bodyParser = require('body-parser'),
+    compress = require('compression'),
     methodOverride = require('method-override'),
     Mongoose = require('mongoose'),
     db = Mongoose.connect('mongodb://localhost/fastforward'),
     Movie = Mongoose.model("Movie",require('./models/movies').Movie);
 
 app.use('/assets', express.static(__dirname + '/public/assets'));
+
+app.use(compress());
 app.use(bodyParser());
 app.use(methodOverride());
 
