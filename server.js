@@ -33,12 +33,20 @@ app.post('/movies',function(req,res){
   Movie.findOne({title:req.body.title},function(err,obj){
     if(obj === null){
       req.body.status = "Pending"; 
-      new Movie(req.body).save(function(err){
+      
+      var movie = new Movie();
+      movie.title = req.body.title;
+      movie.imgURL = req.body.imgURL;
+      movie.year = req.body.year;
+      movie.length = req.body.length;
+      movie.status = req.body.status;
+      
+      movie.save(function(err){
         if(err) res.send(400,err);
         else res.send(200,obj);
       });
     }
-    else res.send(400,req.body.title+" already exists. Use PUT to update.");
+    else res.json(400,{"error":req.body.title+" already exists. Use PUT to update."});
   });
 });
 
