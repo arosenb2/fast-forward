@@ -13,6 +13,11 @@ app.use(compress());
 app.use(bodyParser());
 app.use(methodOverride());
 
+
+app.set("views", __dirname+"/public");
+
+app.use('/',express.static(__dirname+"/public"));
+
 app.get('/',function(req,res){
   res.sendfile("/assets/index.html");
 });
