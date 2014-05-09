@@ -13,7 +13,7 @@ app.factory("MoviesFactory",function($http){
 });
 
 app.controller("HomeControlller",function($scope,MoviesFactory){
-  MoviesFactory.getMovies(function(data){
+  MoviesFactory.getMovies().success(function(data){
     $scope.movies = data;
   });
 });
