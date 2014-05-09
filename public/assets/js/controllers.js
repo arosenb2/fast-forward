@@ -13,7 +13,9 @@ getMovie: getMovie
 };
 });
 app.controller("HomeControlller",function($scope,MoviesFactory){
-$scope.movies = MoviesFactory.getMovies().success(data){
-return data;
+$scope.movies = [];
+
+MoviesFactory.getMovies().success(data){
+$scope.movies = data;
 };
 });
