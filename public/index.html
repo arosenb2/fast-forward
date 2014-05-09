@@ -11,8 +11,8 @@
 <h1>FASTforward</h1>
 </header>
 <div class="container" ng-controller="HomeController">
-<ul ng-repeat="movie in movies track by movie._id">
-<li>{{movie.title}} <small>{{movie.year}}</small> - {{movie.length}} minutes</li>
+<ul>
+<li ng-repeat="movie in movies track by movie._id">{{movie.title}} <small>{{movie.year}}</small> - {{movie.length}} minutes</li>
 </ul>
 </div>
 <footer>&copy; Aaron Rosenbaum &ndash; 2014</footer>
