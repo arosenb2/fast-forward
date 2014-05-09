@@ -7,8 +7,6 @@ var express = require('express'),
     db = Mongoose.connect('mongodb://localhost/fastforward'),
     Movie = Mongoose.model("Movie",require('./models/movies').Movie);
 
-app.use('/assets', express.static(__dirname + '/public/assets'));
-
 app.use(compress());
 app.use(bodyParser());
 app.use(methodOverride());
@@ -17,6 +15,7 @@ app.use(methodOverride());
 app.set("views", __dirname+"/public");
 
 app.use('/',express.static(__dirname+"/public"));
+app.use('/assets', express.static(__dirname + '/public/assets'));
 
 app.get('/',function(req,res){
   res.sendfile("/assets/index.html");
