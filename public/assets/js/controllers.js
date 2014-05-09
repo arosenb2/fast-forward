@@ -12,7 +12,7 @@ app.factory("MoviesFactory",function($http){
   }
 });
 
-app.controller("HomeControlller",function($scope,MoviesFactory){
+app.controller("HomeController",function($scope,MoviesFactory){
   MoviesFactory.getMovies().success(function(data){
     $scope.movies = data;
   });
