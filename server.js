@@ -14,7 +14,7 @@ app.use(bodyParser());
 app.use(methodOverride());
 
 app.get('/',function(req,res){
-  res.sendfile("/public/index.html");
+  res.sendfile("/assets/index.html");
 });
 app.get('/movies',function(req,res){
   // http://node-fast-forward-107599.use1-2.nitrousbox.com/movies
